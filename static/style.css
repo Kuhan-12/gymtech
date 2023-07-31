@@ -1,0 +1,2181 @@
+body{
+    box-sizing: border-box;
+}
+/* <------------------------------------------- Home page --------------------------------------------->  */
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+.home{
+    background-image: url(./images/bg1.jpeg);
+    background-size: 100%;
+    color: white;
+    height: 650px;
+    padding-top: 20px;
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+nav span{
+    font-size: 40px;
+    cursor: pointer;
+}
+
+nav span:hover{
+    font-size: 42px;
+    transition: 0.4s;
+    color: grey;
+}
+
+ul button{
+    background-color: rgb(244,11,11);
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    margin-left: 100px;
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+ul button:hover{
+    border: 3px solid white;
+    background-color: grey;
+}
+
+ul{
+    display: flex;
+    list-style: none;
+}
+
+ul li a{
+    margin-inline: 30px;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.home .text{
+    margin-left: 7%;
+    margin-top: 120px;
+    cursor: pointer;
+}
+
+.home .text h1{
+    font-size: 100px;
+}
+
+.home .text p{
+    font-size: 27px;
+    margin-top: 20px;
+    margin-right: 580px;
+}
+
+.home .text button{
+    background-color: rgb(231,13,13);
+    color: white;
+    border: none;
+    margin: 50px;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 25px;
+    transition: 0.4s;
+}
+
+.home .text button:hover{
+    border: 3px solid white;
+    background-color: grey;
+}
+
+ul li a:hover{
+    color: grey;
+    margin-top: 2px;
+    cursor: pointer;
+    font-size: 23px;
+    transition: 0.5s;
+}
+
+/*<------------------------------------- About Page  -------------------------------->  */
+
+.about{
+    background-image: url(./images/bg2.jpg);
+    background-size: 100%;
+    color: white;
+    height: 650px;
+    padding-top: 20px;
+    margin-top: 1px;
+}
+
+.about h1{
+    font-size: 50px;
+}
+
+.about .text{
+    float: right;
+}
+
+.about .text h3{
+    padding-right: 20px;
+    font-size: 60px;
+    padding-top: 40px;
+    color: rgb(73, 188, 6);
+    margin-left: 500px;
+}
+
+.about .text p{
+    padding-top: 40px;
+    padding-right: 15px;
+    font-size: 27px;
+    margin-left: 600px;
+}
+
+.about .text button{
+    background-color: rgb(244,11,11);
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    float: right;
+    cursor: pointer;
+    height: 50px;
+    width: 150px;
+    margin-right: 30px;
+    margin-bottom: 10px;
+}
+
+.about .text button:hover{
+    border: 3px solid white;
+    background-color: rgb(222, 162, 31);
+}
+
+/* <--------------------------------------- Plans Page --------------------------------------------------> */
+
+.plans{
+    background-image: url(./images/bg3.jpg);
+    background-size: 100%;
+    color: white;
+    height: 600px;
+    padding-top: 20px;
+    margin-top: 1px;
+}
+
+.plans h1{
+    font-size: 50px;
+}
+
+.plans .package{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.plans .package .basic{
+    height: 310px;
+    width: 300px;
+    /* border: 3px solid rgb(241, 226, 52); */
+}
+
+.plans .package .basic:hover{
+    background-color: rgba(246, 106, 106, 0.667);
+    border-radius: 5px;
+}
+
+.plans .package .primium{
+    height: 310px;
+    width: 300px;
+    /* border: 3px solid rgb(89, 12, 231); */
+}
+
+.plans .package .primium:hover{
+    background-color: rgba(6, 148, 155, 0.73);
+    border-radius: 5px;
+}
+
+.plans .package .diamond{
+    height: 310px;
+    width: 300px;
+    /* border: 3px solid red; */
+}
+
+.plans .package .diamond:hover{
+    background-color: rgba(147, 152, 3, 0.655);
+    border-radius: 5px;
+}
+
+
+.plans .package .basic p{
+    line-height: 25px;
+    text-align: left;
+    margin-left: 50px;
+    font-size: 20px;
+}
+
+.plans .package .basic .rules{
+    margin-top: 20px;
+}
+
+.plans .package .basic .logo{
+    font-size: 60px;
+}
+
+.plans .package .basic .rules i{
+    margin-right: 10px;
+}
+
+.plans .package .primium p{
+    line-height: 25px;
+    text-align: left;
+    margin-left: 50px;
+    font-size: 20px;
+}
+
+.plans .package .primium .rules{
+    margin-top: 20px;
+}
+
+.plans .package .primium .logo{
+    font-size: 60px;
+}
+
+.plans .package .primium .rules i{
+    margin-right: 10px;
+}
+
+.plans .package .diamond p{
+    line-height: 25px;
+    text-align: left;
+    margin-left: 50px;
+    font-size: 20px;
+}
+
+.plans .package .diamond .rules{
+    margin-top: 20px;
+}
+
+.plans .package .diamond .logo{
+    font-size: 60px;
+}
+
+.plans .package .diamond .rules i{
+    margin-right: 10px;
+}
+
+.plans .footer p{
+    margin-top: 70px;
+    font-size: 28px;
+    color: rgb(255, 33, 33);
+}
+
+.plans .package button{
+    text-align: center;
+    font-size: 15px;
+    color: #090707;
+    width: 30%;
+    padding: 5px;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    margin-top: 5px;
+    border-radius: 10px;
+    background: #ff9f43;
+}
+
+/* <----------------------------------------- Trainers Page ------------------------------------------> */
+
+.trainers{
+    background-image: url(./images/bg5.jpg);
+    background-size: 100%;
+    color: white;
+    height: 600px;
+    padding-top: 20px;
+    margin-top: 1px;
+}
+
+.trainers table{
+    text-align: center;
+    height: 300px;
+    width: 300px;
+    margin-top: 60px;
+    font-size: 30px;
+    margin-left: 50px;
+    position: absolute;
+    border-radius: 10px;
+}
+
+.trainers h1{
+    font-size: 50px;
+}
+
+.trainers .general{
+    margin-top: 50px;
+    font-size: 35px;
+    float: right;
+    line-height: 50px;
+    margin-right: 20px;
+    margin-left: 450px;
+}
+
+.trainers button{
+    background-color: rgb(244,11,11);
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    float: right;
+    cursor: pointer;
+    height: 50px;
+    width: 150px;
+    margin-right: 30px;
+    margin-top: 100px;
+}
+
+.trainers button:hover{
+    border: 3px solid white;
+    background-color: rgb(222, 162, 31);
+}
+
+/*<----------------------------------------------------- Footer --------------------------------------------------> */
+
+footer{
+    background-color: black;
+}
+
+.footercontainer{
+    width: 100%;
+    padding: 10px 20px ;
+}
+
+.socialicons{
+    display: flex;
+    justify-content: center;
+    
+}
+
+.socialicons a{
+    text-decoration: none;
+    padding: 10px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 50%;
+}
+
+.socialicons a i{
+    font-size: 2em;
+    color: black;
+    opacity: 0.9;
+}
+
+.socialicons a:hover{
+    background-color: #111;
+    transition: 0.5s ;
+}
+
+.socialicons a:hover i{
+    color: white;
+    transition: 0.5s;
+}
+
+.footernav{
+    margin: 10px;
+}
+
+.footernav ul{
+    display: flex;
+    justify-content: center;
+}
+
+.footernav ul li a{
+    color: white;
+    margin-right: 20px;
+    text-decoration: none;
+    font-size: 1.3em;
+    opacity: 0.7;
+    transition: 0.5s;
+}
+
+.bottom{
+    background-color: #000;
+    /* padding: 20px; */
+    text-align: center;
+}
+
+.bottom p{
+    color: white;
+}
+
+.designer{
+    text-transform: uppercase;
+}
+
+/*<-------------------------------------------- Media Query ------------------------------------------> */
+
+@media ( max-width:1340px){
+    
+    .home .text h1{
+       font-size: 80px;
+    }
+
+    .home .text p{
+        margin-right: 450px;
+    }
+
+    .about .text h3{
+        font-size: 50px;
+    }
+
+    #about .text p{
+        font-size: 25px;
+        margin-left: 600px;
+    }
+}
+
+@media (max-width:1200px){
+
+    .home{
+        height: 100%;
+        width: 100%;
+    }
+
+    .about .text h3{
+        margin-left: 470px;
+    }
+
+    #about .text p{
+        font-size: 23px;
+        line-height: 30px;
+        margin-left: 600px;
+        padding-top: 30px;
+    }
+
+}
+
+@media (max-width:1140px){
+
+    .about .text h3{
+        font-size: 45px;
+        margin-left: 450px;
+    }
+
+    #about .text p{
+        font-size: 20px;
+        line-height: 35px;
+        margin-left: 500px;
+    }
+
+    .trainers .general{
+        font-size: 30px;
+        line-height: 50px;
+    }
+}
+
+@media (max-width:1060px){
+
+    ul button{
+        font-size: 15px;
+        margin-left: 80px;
+    }
+
+    .home .text h1{
+        font-size: 70px;
+    }
+
+    .home .text p{
+        margin-right: 380px;
+    }
+
+    .trainers .general{
+        font-size: 28px;
+        line-height: 50px;
+        margin-left: 400px;
+    }
+
+    .about .text h3{
+        font-size: 43px;
+        margin-left: 400px;
+    }
+
+    #about .text p{
+       padding-top: 30px;
+       margin-left: 470px;
+    }
+}
+
+@media (max-width:982px){
+
+    .home .text p{
+       margin-right: 350px;
+    }
+
+    .home nav span{
+        font-size: 35px;
+    }
+
+    nav{
+        margin-top: 12px;
+    }
+
+    ul li a{
+        margin-inline: 27px;
+        font-size: 20px;
+    }
+
+    ul button{
+        font-size: 15px;
+        margin-left: 80px;
+    }
+
+    .trainers table{
+        margin-left: 30px;
+    }
+
+    .trainers .general{
+        font-size: 26px;
+        line-height: 45px;
+        margin-left: 370px;
+    }
+
+    .about{
+        height: 580px;
+    }
+
+    #about .text p{
+        padding-top: 30px;
+        font-size: 20px;
+        line-height: 30px;
+        margin-left: 400px;
+    }
+
+    .about .text h3{
+        font-size: 40px;
+        margin-left: 350px;
+    }
+
+    .plans{
+        height: 570px;
+    }
+
+    .trainers button{
+        margin-top: 100px;
+        margin-left: 300px;
+    }
+}
+
+@media (max-width:905px){
+
+    .home{
+        height: 450px;
+    }
+
+    .home .text h1{
+        font-size: 60px;
+    }
+
+    .home .text p{
+        margin-right: 330px;
+        font-size: 25px;
+     }
+
+    nav span{
+        font-size: 30px;
+    }
+    
+    ul li a{
+        margin-inline: 20px;
+        font-size: 17px;
+        color: white;
+    }
+
+    ul button{
+        font-size: 12px;
+        margin-left: 60px;
+    }
+    
+    .trainers table{
+        width: 270px;
+    }
+
+    .trainers .general{
+        margin-top: 40px;
+        margin-left: 350px;
+    }
+
+    .about{
+        height: 550px;
+    }
+
+    .plans{
+        height: 550px;
+    }
+
+    .trainers{
+        height: 550px;
+    }
+
+    .trainers button{
+        margin-top: 70px;
+    }
+
+    .about .text button{
+        height: 40px;
+        width: 170px;
+    }
+
+    .about .text h3{
+        padding-top: 30px;
+        margin-left: 300px;
+    }
+
+    #about .text p{
+        margin-left: 350px;
+        padding-top: 30px;
+    }
+}
+
+@media (max-width:850px){
+
+    .home{
+        height: 400px;
+    }
+
+    .about{
+        height: 510px;
+    }
+
+    .plans{
+        height: 510px;
+    }
+
+    .trainers{
+        height: 520px;
+    }
+
+    .home .text{
+        margin-left: 6%;
+        margin-top: 100px;
+    }
+
+    .home .text button{
+        margin-top: 15px;
+    }
+
+    .home .text p{
+       margin-right: 300px;
+    }
+
+    .about h1{
+        font-size: 40px;
+    }
+
+    .about .text h3{
+        font-size: 38px;
+        padding-top: 25px;
+        margin-left: 270px;
+    }
+
+    #about .text p{
+        line-height: 23px;
+        margin-left: 330px;
+        padding-top: 25px;
+
+    }
+
+    .trainers .general{
+        font-size: 25px;
+        line-height: 40px;
+        margin-left: 330px;
+    }
+
+    .trainers button{
+        margin-top: 40px;
+    }
+
+    .plans .package .basic p{
+        margin-left: 50px;
+        font-size: 17px;
+    }
+
+    .plans .package .primium p{
+        margin-left: 50px;
+        font-size: 17px;
+    }
+
+    .plans .package .diamond p{
+        margin-left: 50px;
+        font-size: 17px;
+    }
+}
+
+@media (max-width:800px){
+
+    .home .text p{
+        margin-right: 270px;
+        font-size: 23px;
+     }
+
+    .about{
+        height: 480px;
+    }
+
+    .plans{
+        height: 480px;
+    }
+
+    .trainers{
+        height: 490px;
+    }
+
+    .about .text h3{
+        font-size: 35px;
+        padding-top: 18px;
+    }
+
+    #about .text p{
+        line-height: 23px;
+        padding-top: 20px;
+        margin-left: 300px;
+    }
+
+    .about .text button{
+        margin-top: 20px;
+    }
+
+    .plans .footer p{
+        margin-top: 30px;
+    }
+
+    .trainers .general{
+        margin-top: 30px;
+        line-height: 38px;
+        margin-left: 280px;
+    }
+
+    .trainers table{
+        margin-top: 50px;
+        margin-left: 20px;
+        width: 250px;
+        font-size: 27px;
+    }
+
+    .trainers button{
+        margin-top: 40px;
+    }
+}
+
+@media (max-width:750px){
+
+    .home{
+        height: 370px;
+    }
+
+    nav{
+        margin-top: 5px;
+    }
+
+    nav span{
+        font-size: 25px;
+    }
+
+    ul li a{
+        margin-inline: 15px;
+        font-size: 15px;
+    }
+
+    ul button{
+        font-size: 12px;
+        margin-left: 40px;
+    }
+
+    .home .text{
+        margin-top: 85px;
+    }
+
+    .home .text h1{
+        font-size: 50px;
+    }
+
+    .home .text p{
+        margin-right: 250px;
+     }
+
+    .about{
+        height: 450px;
+    }
+
+    .about h1{
+        font-size: 35px;
+    }
+
+    .about .text h3{
+        font-size: 33px;
+        padding-top: 15px;
+        margin-left: 220px;
+    }
+
+    #about .text p{
+        line-height: 23px;
+        padding-top: 13px;
+        margin-left: 270px;
+        font-size: 19px;
+    }
+
+    .plans{
+        height: 440px;
+    }
+
+    .plans .package .basic{
+        height: 340px;
+        overflow: auto;
+    }
+
+    .plans .package .primium{
+        height: 340px;
+        overflow: auto;
+    }
+
+    .plans .package .diamond{
+        overflow: auto;
+        height: 340px;
+    }
+
+    .plans .package .basic p{
+        margin-left: 40px;
+        font-size: 15px;
+    }
+
+    .plans .package .primium p{
+        margin-left: 40px;
+        font-size: 15px;
+    }
+
+    .plans .package .diamond p{
+        margin-left: 40px;
+        font-size: 15px;
+    }
+
+    .plans .footer p{
+        margin-top: 60px;
+    }
+
+    .plans .package button{
+        font-size: 15px;
+        width: 30%;
+        padding: 3px;
+    }
+
+    .trainers{
+        height: 450px;
+    }
+
+    .trainers table{
+        margin-top: 20px;
+    }
+
+    .trainers .general{
+        font-size: 23px;
+        line-height: 35px;
+        margin-top: 20px;
+    }
+
+    .trainers button{
+        margin-top: 30px;
+    }
+}
+
+@media (max-width:700px){
+
+    .home{
+        height: 347px;
+    }
+
+    .home .text{
+        margin-top: 70px;
+        margin-left: 5%;
+    }
+
+
+    .home .text p{
+        margin-right: 240px;
+        font-size: 23px;
+     }
+
+    .about{
+        height: 410px;
+    }
+
+    .about h1{
+        font-size: 33px;
+    }
+
+    .about .text h3{
+        font-size: 31px;
+        padding-top: 15px;
+        margin-left: 215px;
+    }
+
+    #about .text p{
+        line-height: 21px;
+        margin-left: 250px;
+        font-size: 17px;
+        padding-top: 10px;
+    }
+
+    .about .text button{
+        margin-top: 17px;
+    }
+
+    .plans{
+        height: 410px;
+    }
+
+    .plans .package{
+        margin-top: 20px;
+    }
+
+    .plans .package .basic p{
+        margin-left: 30px;
+    }
+
+    .plans .package .primium p{
+        margin-left: 30px;
+    }
+
+    .plans .package .diamond p{
+        margin-left: 30px;
+    }
+
+    .plans .package .basic{
+        height: 250px;
+    }
+
+    .plans .package .primium{
+        height: 250px;
+    }
+
+    .plans .package .diamond{
+        height: 250px;
+    }
+
+    .plans .package button{
+        font-size: 13px;
+        width: 30%;
+        padding: 3px;
+    }
+
+    .plans .footer p{
+        margin-top: 30px;
+        font-size: 25px;
+    }
+
+    .trainers{
+        height: 410px;
+    }
+
+    .trainers table{
+        width: 230px;
+        height: 280px;
+        font-size: 25px;
+    }
+
+    .trainers .general{
+        line-height: 30px;
+        margin-left: 270px;
+    }
+
+    .trainers button{
+        margin-top: 20px;
+        height: 40px;
+        width: 120px;
+    }
+}
+
+@media (max-width:650px){
+
+    .home{
+        height: 310px;
+    }
+
+    .home .text{
+        margin-top: 40px;
+        margin-left: 5%;
+    }
+
+    .home .text h1{
+        font-size: 45px;
+    }
+
+    .home .text p{
+        margin-right: 200px;
+        font-size: 21px;
+    }
+
+    nav{
+        margin-top: 2px;
+    }
+
+    ul button{
+        font-size: 12px;
+        margin-left: 30px;
+    }
+
+    .home .text button{
+        margin-top: 30px;
+    }
+
+    .about{
+        height: 370px;
+    }
+
+    .about .text h3{
+        font-size: 29px;
+        padding-top: 13px;
+        margin-left: 190px;
+    }
+
+    #about .text p{
+        line-height: 19px;
+        margin-left: 220px;
+        font-size: 17px;
+        padding-top: 7px;
+    }
+
+    .about .text button{
+        margin-top: 12px;
+    }
+
+    .plans{
+        height: 370px;
+    }
+
+    .plans .package .basic{
+        height: 230px;
+    }
+
+    .plans .package .primium{
+        height: 230px;
+    }
+
+    .plans .package .diamond{
+        height: 230px;
+    }
+
+    .plans .package .basic p{
+        margin-top: -3px;
+        margin-left: 20px;
+    }
+
+    .plans .package .primium p{
+        margin-top: -3px;
+        margin-left: 20px;
+    }
+
+    .plans .footer p{
+        margin-top: 10px;
+        font-size: 22px;
+    }
+
+    .plans .package .diamond p{
+        margin-top: -3px;
+        margin-left: 20px;
+    }
+
+    .plans .package .basic .rules{
+        margin-top: 10px;
+    }
+
+    .plans .package .primium .rules{
+        margin-top: 10px;
+    }
+
+    .plans .package .diamond .rules{
+        margin-top: 10px;
+    }
+
+    .trainers{
+        height: 370px;
+    }
+
+    .trainers nav h1{
+        font-size: 30px;
+    }
+
+    .trainers table{
+        width: 200px;
+        height: 250px;
+        font-size: 22px;
+    }
+
+    .trainers .general{
+        line-height: 28px;
+        margin-left: 240px;
+        font-size: 22px;
+    }
+}
+
+@media (max-width:600px)
+{
+    .home{
+        height: 290px;
+    }
+
+    nav{
+        margin-top: 1px;
+    }
+
+    ul button{
+        font-size: 12px;
+        margin-left: 20px;
+    }
+
+    ul li a{
+        margin-inline: 11px;
+        font-size: 13px;
+    }
+
+    .home .text{
+        margin-top: 40px;
+    }
+
+    .home .text h1{
+        font-size: 45px;
+    }
+
+    .home .text p{
+        font-size: 20px;
+        margin-right: 180px;
+    }
+
+    .home .text button{
+        margin-top: 20px;
+        font-size: 22px;
+    }
+
+    .about h1{
+        font-size: 31px;
+        margin-top: -10px;
+    }
+
+    .about{
+        height: 340px;
+    }
+
+    .about .text h3{
+        font-size: 27px;
+        padding-top: 10px;
+        margin-left: 170px;
+    }
+
+    #about .text p{
+        line-height: 17px;
+        margin-left: 200px;
+        font-size: 17px;
+        padding-top: 7px;
+    }
+
+    .about .text button{
+        margin-top: 7px;
+    }
+
+    .plans{
+        height: 340px;
+    }
+
+    .plans nav h1{
+        font-size: 35px;
+        margin-top: -10px;
+    }
+
+    .plans .package .basic{
+        height: 210px;
+    }
+
+    .plans .package .primium{
+        height: 210px;
+    }
+
+    .plans .package .diamond{
+        height: 210px;
+    }
+
+    .plans .footer p{
+        margin-top: 50px;
+        font-size: 20px;
+    }
+
+    .plans .package .basic p{
+        margin-left: 15px;
+    }
+
+    .plans .package .primium p{
+        margin-left: 15px;
+    }
+
+    .plans .package .diamond p{
+        margin-left: 15px;
+    }
+
+    .plans .package .basic .logo{
+        font-size: 40px;
+    }
+
+    .plans .package .primium .logo{
+        font-size: 40px;
+    }
+
+    .plans .package .diamond .logo{
+        font-size: 40px;
+    }
+
+    .plans .package .basic .rules{
+        margin-top: 8px;
+    }
+
+    .plans .package .primium .rules{
+        margin-top: 8px;
+    }
+
+    .plans .package .diamond .rules{
+        margin-top: 8px;
+    }
+
+    .plans .package button{
+        font-size: 13px;
+        width: 40%;
+        padding: 3px;
+    }
+
+    .trainers{
+        height: 340px;
+    }
+
+    .trainers nav h1{
+        margin-top: -10px;
+    }
+
+    .trainers table{
+        width: 190px;
+        height: 230px;
+        font-size: 20px;
+    }
+
+    .trainers .general{
+        line-height: 26px;
+        margin-left: 220px;
+        font-size: 22px;
+    }
+
+    .trainers button{
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 550px){
+
+    .home{
+        height: 260px;
+    }
+
+    nav{
+        margin-top: -2px;
+    }
+
+    ul button{
+        font-size: 15px;
+        margin-left: 17px;
+    }
+
+    ul li a{
+        margin-inline: 9px;
+        font-size: 13px;
+    }
+
+    .home .text{
+        margin-top: 35px;
+    }
+
+    .home .text h1{
+        font-size: 40px;
+    }
+
+    .home .text p{
+        font-size: 19px;
+        margin-top: 5px;
+    }
+
+    .home nav span{
+        font-size: 30px;
+    }
+
+    .about{
+        height: 310px;
+    }
+
+    .about h1{
+        font-size: 30px;
+        margin-top: -15px;
+    }
+
+    .about .text h3{
+        font-size: 25px;
+        padding-top: 8px;
+        margin-left: 150px;
+    }
+
+    #about .text p{
+        line-height: 15px;
+        margin-left: 180px;
+        font-size: 16px;
+        padding-top: 7px;
+    }
+
+    .plans{
+        height: 310px;
+    }
+
+    .plans nav h1{
+        font-size: 30px;
+        margin-top: -15px;
+    }
+
+    .plans .package{
+        margin-top: 16px;
+    }
+
+    .plans .package .basic{
+        height: 190px;
+    }
+
+    .plans .package .primium{
+        height: 190px;
+    }
+
+    .plans .package .diamond{
+        height: 190px;
+    }
+
+    .plans .package .basic p{
+        line-height: 22px;
+        font-size: 15px;
+        margin-left: 15px;
+    }
+
+    .plans .package .primium p{
+        line-height: 22px;
+        font-size: 14px;
+        margin-left: 15px;
+    }
+
+    .plans .package .diamond p{
+        line-height: 22px;
+        font-size: 14px;
+        margin-left: 15px;
+    }
+
+    .plans .package .basic .logo{
+        /* margin-top: 10px; */
+        font-size: 30px;
+    }
+
+    .plans .package .primium .logo{
+        font-size: 30px;
+    }
+
+    .plans .package .diamond .logo{
+        font-size: 30px;
+    }
+
+    .plans .package .basic .rules{
+        margin-top: 8px;
+    }
+
+    .plans .package .primium .rules{
+        margin-top: 8px;
+    }
+
+    .plans .package .diamond .rules{
+        margin-top: 8px;
+    }
+
+    .plans .package .basic .rules p{
+        font-size: 13px;
+    }
+
+    .plans .package .primium .rules p{
+        font-size: 13px;
+    }
+
+    .plans .package .diamond .rules p{
+        font-size: 13px;
+    }
+
+    .trainers{
+        height: 310px;
+    }
+
+    .trainers table{
+        width: 170px;
+        height: 200px;
+        font-size: 20px;
+        margin-left: 5px;
+    }
+
+    .trainers .general{
+        line-height: 26px;
+        margin-left: 180px;
+        margin-top: 15px;
+        font-size: 20px;
+        margin-right: 10px;
+    }
+}
+
+
+@media (max-width: 500px){
+
+    .home{
+        height: 230px;
+    }
+
+    nav{
+        margin-top: -5px;
+    }
+
+    ul button{
+        font-size: 13px;
+        margin-left: 17px;
+    }
+
+    ul li a{
+        margin-inline: 9px;
+        font-size: 11px;
+    }
+
+    .home .text{
+        margin-top: 30px;
+    }
+
+    .home .text h1{
+        font-size: 35px;
+    }
+
+    .home .text p{
+        font-size: 17px;
+        margin-top: 3px;
+        margin-right: 150px;
+    }
+
+    .home nav span{
+        font-size: 25px;
+    }
+
+    .home .text button{
+        margin-top: 17px;
+        font-size: 20px;
+    }
+
+    .about{
+        height: 280px;
+    }
+
+    .about h1{
+        font-size: 26px;
+        margin-top: -20px;
+    }
+
+    .about .text h3{
+        font-size: 22px;
+        padding-top: 7px;
+        margin-left: 130px;
+    }
+
+    #about .text p{
+        line-height: 13px;
+        margin-left: 160px;
+        font-size: 15px;
+    }
+
+    .about .text button{
+        margin-top: 20px;
+        height: 35px;
+    }
+
+    .plans{
+        height: 280px;
+    }
+
+    .plans nav h1{
+        font-size: 27px;
+    }
+
+    .plans .package{
+        margin-top: 22px;
+    }
+
+    .plans .package .basic{
+        height: 170px;
+    }
+
+    .plans .package .primium{
+        height: 170px;
+    }
+
+    .plans .package .diamond{
+        height: 170px;
+    }
+
+    .plans .package .basic p{
+        line-height: 20px;
+        font-size: 13px;
+        margin-left: 12px;
+    }
+
+    .plans .package .primium p{
+        line-height: 20px;
+        font-size: 12px;
+        margin-left: 12px;
+    }
+
+    .plans .package .diamond p{
+        line-height: 20px;
+        font-size: 12px;
+        margin-left: 12px;
+    }
+
+    .plans .package .basic .logo{
+        font-size: 27px;
+    }
+
+    .plans .package .primium .logo{
+        font-size: 27px;
+    }
+
+    .plans .package .diamond .logo{
+        font-size: 27px;
+    }
+
+    .plans .package .basic .rules{
+        margin-top: 5px;
+    }
+
+    .plans .package .primium .rules{
+        margin-top: 5px;
+    }
+
+    .plans .package .diamond .rules{
+        margin-top: 5px;
+    }
+
+    .plans .package .basic .rules p{
+        font-size: 12px;
+    }
+
+    .plans .package .primium .rules p{
+        font-size: 12px;
+    }
+
+    .plans .package .diamond .rules p{
+        font-size: 12px;
+    }
+
+    .plans .package .basic .rules i{
+        margin-right: 7px;
+    }
+    
+
+    .plans .package .primium .rules i{
+        margin-right: 7px;
+    }
+    
+
+    .plans .package .diamond .rules i{
+        margin-right: 7px;
+    }
+    
+    .plans .footer p{
+        font-size: 18px;
+    }
+    .trainers{
+        height: 280px;
+    }
+
+    .trainers h1{
+        font-size: 40px;
+    }
+
+    .trainers table{
+        width: 150px;
+        font-size: 20px;
+    }
+
+    .trainers nav h1{
+        font-size: 26px;
+    }
+
+    .trainers .general{
+        line-height: 24px;
+        margin-left: 160px;
+        margin-top: 15px;
+        font-size: 18px;
+    }
+
+    .socialicons a{
+        font-size: 1em;
+        margin-left: 0px
+    }
+
+    .footernav ul li a{
+        font-size: 1em;
+    }
+}
+
+@media (max-width:450px){
+
+    .home{
+        height: 200px;
+    }
+
+    nav{
+        margin-top: -10px;
+    }
+
+    ul button{
+        font-size: 11px;
+        margin-left: 15px;
+    }
+
+    ul li a{
+        margin-inline: 7px;
+        font-size: 10px;
+    }
+
+    .home .text{
+        margin-top: 25px;
+    }
+
+    .home .text h1{
+        font-size: 30px;
+    }
+
+    .home .text p{
+        font-size: 15px;
+        margin-top: 2px;
+        margin-right: 130px;
+    }
+
+    .home nav span{
+        font-size: 23px;
+    }
+
+    .home .text button{
+        margin-top: 15px;
+        font-size: 18px;
+    }
+
+    .about{
+        height: 240px;
+    }
+
+    .about h1{
+        font-size: 24px;
+    }
+
+    .about .text h3{
+        font-size: 20px;
+        margin-left: 110px;
+    }
+
+    #about .text p{
+        line-height: 11px;
+        margin-left: 140px;
+        font-size: 13px;
+    }
+
+    .about .text button{
+        font-size: 17px;
+        margin-top: 10px;
+        height: 38px;
+        width: 120px;
+    }
+
+    .plans{
+        height: 240px;
+    }
+
+    .plans nav h1{
+        font-size: 25px;
+        margin-top: 0.1px;
+    }
+
+    .plans .package{
+        margin-top: 15px;
+    }
+
+    .plans .package .basic{
+        height: 160px;
+    }
+
+    .plans .package .primium{
+        height: 160px;
+    }
+
+    .plans .package .diamond{
+        height: 160px;
+    }
+
+    .plans .package .basic p{
+        line-height: 18px;
+        font-size: 12px;
+        margin-left: 10px;
+    }
+
+    .plans .package .primium p{
+        line-height: 18px;
+        font-size: 11px;
+        margin-left: 10px;
+    }
+
+    .plans .package .diamond p{
+        line-height: 18px;
+        font-size: 11px;
+        margin-left: 10px;
+    }
+
+    .plans .package .basic .logo{
+        font-size: 25px;
+    }
+
+    .plans .package .primium .logo{
+        font-size: 25px;
+    }
+
+    .plans .package .diamond .logo{
+        font-size: 25px;
+    }
+
+    .plans .package .basic .rules p{
+        font-size: 11px;
+    }
+
+    .plans .package .primium .rules p{
+        font-size: 11px;
+    }
+
+    .plans .package .diamond .rules p{
+        font-size: 11px;
+    }
+
+    .plans .package button{
+        font-size: 13px;
+        width: 50%;
+        padding: 3px;
+    }
+
+    .plans .footer p{
+        font-size: 15px;
+        margin-top: 30px;
+    }
+    .trainers{
+        height: 240px;
+    }
+
+    .trainers h1{
+        font-size: 35px;
+    }
+
+    .trainers table{
+        width: 130px;
+        font-size: 16px;
+        margin-top: 12px;
+    }
+
+    .trainers nav h1{
+        font-size: 24px;
+    }
+
+    .trainers .general{
+        line-height: 21px;
+        margin-left: 140px;
+        margin-top: 12px;
+        font-size: 16px;
+    }
+
+    .trainers button{
+        margin-top: 10px;
+        font-size: 15px;
+        height: 30px;
+    }
+}
+
+@media (max-width:400px){
+
+    .home{
+        height: 170px;
+    }
+
+    nav{
+        margin-top: -13px;
+    }
+
+    ul button{
+        font-size: 10px;
+        margin-left: 15px;
+        padding: 7px;
+    }
+
+    ul li a{
+        margin-inline: 5px;
+        font-size: 9px;
+    }
+
+    .home .text{
+        margin-top: 20px;
+    }
+
+    .home .text h1{
+        font-size: 27px;
+    }
+
+    .home .text p{
+        font-size: 14px;
+        margin-top: 2px;
+        margin-right: 120px;
+    }
+
+    .home nav span{
+        font-size: 20px;
+    }
+
+    .home .text button{
+        padding: 5px;
+        font-size: 18px;
+        height: 30px;
+    }
+
+    .about{
+        height: 210px;
+    }
+
+    .about h1{
+        font-size: 22px;
+    }
+
+    .about .text h3{
+        font-size: 17px;
+        margin-left: 100px;
+        margin-top: -2px;
+    }
+
+    #about .text p{
+        line-height: 11px;
+        margin-left: 120px;
+        font-size: 12px;
+        margin-top: -2px;
+    }
+
+    .about .text button{
+        font-size: 15px;
+        margin-top: 5px;
+        height: 25px;
+        width: 150px;
+    }
+
+    .plans{
+        height: 210px;
+    }
+
+    .plans nav h1{
+        font-size: 22px;
+        margin-top: -1px;
+    }
+
+    .plans .package{
+        margin-top: 12px;
+    }
+
+    .plans .package .basic{
+        height: 150px;
+    }
+
+    .plans .package .primium{
+        height: 150px;
+    }
+
+    .plans .package .diamond{
+        height: 150px;
+    }
+
+    .plans .package .basic p{
+        line-height: 16px;
+        font-size: 11px;
+    }
+
+    .plans .package .primium p{
+        line-height: 16px;
+        font-size: 10px;
+    }
+
+    .plans .package .diamond p{
+        line-height: 16px;
+        font-size: 10px;
+    }
+
+    .plans .package .basic .logo{
+        font-size: 23px;
+    }
+
+    .plans .package .primium .logo{
+        font-size: 23px;
+    }
+
+    .plans .package .diamond .logo{
+        font-size: 23px;
+    }
+
+    .plans .package .basic .rules{
+        margin-top: 2px;
+    }
+
+    .plans .package .primium .rules{
+        margin-top: 2px;
+    }
+
+    .plans .package .diamond .rules{
+        margin-top: 2px;
+    }
+
+    .plans .package .basic .rules p{
+        font-size: 9px;
+    }
+
+    .plans .package .primium .rules p{
+        font-size: 9px;
+    }
+
+    .plans .package .diamond .rules p{
+        font-size: 9px;
+    }
+
+    .plans .footer p{
+        font-size: 13px;
+        margin-top: 10px;
+    }
+    .trainers{
+        height: 210px;
+    }
+
+    .trainers h1{
+        font-size: 35px;
+    }
+
+    .trainers table{
+        width: 120px;
+        height: 180px;
+        font-size: 15px;
+        margin-top: 8px;
+    }
+
+    .trainers nav h1{
+        margin-top: -5px;
+        font-size: 22px;
+    }
+
+    .trainers .general{
+        line-height: 18px;
+        margin-left: 130px;
+        margin-top: 8px;
+        font-size: 14px;
+    }
+
+    .trainers button{
+        margin-top: 2px;
+        font-size: 15px;
+        height: 27px;
+    }
+
+    .bottom p{
+        font-size: 12px;
+    }
+
+    .footernav ul li a{
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width:350px){
+
+    .home{
+        height: 150px;
+    }
+
+    nav{
+        margin-top: -15px;
+    }
+
+    ul button{
+        font-size: 8px;
+        margin-left: 15px;
+        padding: 5px;
+    }
+
+    ul li a{
+        margin-inline: 6px;
+        font-size: 7px;
+    }
+
+    .home .text{
+        margin-top: 18px;
+    }
+
+    .home .text h1{
+        font-size: 23px;
+    }
+
+    .home .text p{
+        font-size: 13px;
+        margin-top: 2px;
+        margin-right: 115px;
+    }
+
+    .home nav span{
+        font-size: 18px;
+    }
+
+    .home .text button{
+        padding: 5px;
+        font-size: 16px;
+        height: 27px;
+        margin-top: 2px;
+    }
+
+    .about{
+        height: 180px;
+    }
+
+    .about h1{
+        font-size: 20px;
+    }
+
+    .about .text h3{
+        font-size: 15px;
+        margin-left: 80px;
+        margin-top: -4px;
+    }
+
+    #about .text p{
+        line-height: 9px;
+        margin-left: 105px;
+        font-size: 10px;
+        margin-top: -2px;
+    }
+
+    .plans{
+        height: 180px;
+    }
+
+    .plans nav h1{
+        font-size: 20px;
+        /* margin-top: 10px; */
+    }
+
+    .plans .package{
+        margin-top: 13px;
+    }
+
+    .plans .package .basic{
+        height: 130px;
+    }
+
+    .plans .package .primium{
+        height: 130px;
+    }
+
+    .plans .package .diamond{
+        height: 130px;
+    }
+
+    .plans .package .basic p{
+        line-height: 14px;
+        font-size: 9px;
+    }
+
+    .plans .package .primium p{
+        line-height: 14px;
+        font-size: 8px;
+    }
+
+    .plans .package .diamond p{
+        line-height: 14px;
+        font-size: 8px;
+    }
+
+    .plans .package .basic .logo{
+        font-size: 20px;
+    }
+
+    .plans .package .primium .logo{
+        font-size: 20px;
+    }
+
+    .plans .package .diamond .logo{
+        font-size: 20px;
+    }
+
+    .plans .package .basic .rules p{
+        font-size: 7px;
+    }
+
+    .plans .package .primium .rules p{
+        font-size: 7px;
+    }
+
+    .plans .package .diamond .rules p{
+        font-size: 7px;
+    }
+
+    .trainers{
+        height: 180px;
+    }
+
+    .trainers h1{
+        font-size: 30px;
+    }
+
+    .trainers table{
+        width: 100px;
+        height: 150px;
+        font-size: 13px;
+        margin-top: 5px;
+    }
+
+    .trainers nav h1{
+        margin-top: -5px;
+        font-size: 20px;
+    }
+
+    .trainers .general{
+        line-height: 15px;
+        margin-left: 110px;
+        margin-top: 8px;
+        font-size: 13px;
+    }
+
+    .trainers button{
+        margin-top: 2px;
+        font-size: 15px;
+        height: 27px;
+    }
+
+    .socialicons a{
+        font-size: 0.5em;
+        margin-left: 0px;
+    }
+
+    .footernav ul li a{
+        font-size: 0.6em;
+    }
+}

@@ -1,0 +1,7 @@
+{
+    "liveServer.settings.port": 5501,
+    "python.analysis.typeCheckingMode": "basic",
+    "editor.suggest.showStatusBar": true,
+    "workbench.editor.sharedViewState": false,
+    "zenMode.hideStatusBar": false
+}

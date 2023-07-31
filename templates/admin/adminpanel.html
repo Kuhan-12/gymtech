@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Panel</title>
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="/static/plugins/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="/static/plugins/fontawesome-free/css/all.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Tempusdominus Bootstrap 4 -->
+  <link rel="stylesheet" href="/static/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+  <link rel="stylesheet" href="/static/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+  <!-- iCheck -->
+  <link rel="stylesheet" href="/static/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <!-- JQVMap -->
+  <link rel="stylesheet" href="plugins/jqvmap/jqvmap.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="/static/dist/css/adminlte.min.css">
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="/static/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <!-- Daterange picker -->
+  <link rel="stylesheet" href="/static/plugins/daterangepicker/daterangepicker.css">
+  <!-- summernote -->
+  <link rel="stylesheet" href="/static/plugins/summernote/summernote-bs4.min.css">
+</head>
+
+<body class="hold-transition dark-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
+  
+  <!-- Navbar  -->
+  <div class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2"  style="background-color:  rgba(0, 0, 0, 0.263); height: 80px;">
+        <div class="col-sm-6">
+          <div class="image user-panel d-flex mt-3">
+            <img src="/static/dist/img/adminlogo.png" alt="GymTech Logo" class="img-circle elevation-2" style="width: 80px; height: 60px;">
+            <div class="info">
+              <a href="#" class="d-block" style="font-size: 2em; color: white;">GymTech</a>
+            </div>
+          </div>
+          <!-- <h1 class="m-0">GymTech</h1> -->
+        </div><!-- /.col -->
+        <div class="col-sm-6">
+          <ol class="breadcrumb float-sm-right">
+            <div class="image user-panel d-flex mt-3">
+              <img src="/{{typ.file}}" class="img-circle elevation-2" alt="User Image" style="width: 80px; height: 60px;">
+              <div class="info">
+                <a href="/logout" class="d-block" style="font-size: 2em; color: white;">{{typ.Fullname}}</a>
+              </div>  
+           </div>
+          </ol>
+        </div><!-- /.col -->
+      </div><!-- /.row -->
+    </div><!-- /.container-fluid -->
+  </div>
+
+  <!-- Middle content  -->
+
+  <div class="content">
+    <section class="content">
+      <div class="container-fluid">
+        <!-- Info boxes -->
+        <div class="row">
+          <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-info">
+              <div class="inner" style="color: black;">
+                  <h3>{{c[0]}}</h3>
+                <p>Members</p>
+              </div>
+            <div class="icon">
+              <i class="fas fa-users"></i></i>
+            </div>
+            <a href="/admin/members/{{typ.User_Id}}" class="small-box-footer">More info<i class="fas fa-arrow-circle-right"></i></a>
+          </div>
+        </div>
+        <!-- /.col -->
+        <div class="col-lg-3 col-6">
+          <!-- small box -->
+          <div class="small-box bg-success">
+            <div class="inner" style="color: black;">
+              {%for  i in cn%}  
+                <h3>{{i[0]}}</h3>
+              {%endfor%}
+              <p>Equipments</p>
+            </div>
+          <div class="icon">
+              <i class="fas fa-shopping-cart"></i>
+          </div>
+          <a href="/admin/equipment/{{typ.User_Id}}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+        </div>
+        </div>
+        <!-- /.col -->
+        <!-- fix for small devices only -->
+        <div class="clearfix hidden-md-up"></div>
+
+        <div class="col-lg-3 col-6">
+          <!-- small box -->
+          <div class="small-box bg-warning">
+            <div class="inner" style="color: black;">
+              {%for i in ct%}  
+                <h3>{{i[0]}}</h3>
+              {%endfor%}
+              <p>Staff</p>
+            </div>
+            <div class="icon">
+              <i class="ion ion-person-add"></i>
+            </div>
+            <a href="/admin/staff/{{typ.User_Id}}" class="small-box-footer" >More info <i class="fas fa-arrow-circle-right"></i></a>
+          </div>
+        </div>
+          <!-- /.col -->
+        <div class="col-lg-3 col-6">
+          <!-- small box -->
+          <div class="small-box bg-danger">
+            <div class="inner" style="color: black;">
+              {%for i in cust%}   
+              <h3>{{i[0]}}</h3>
+              {%endfor%}
+              <p>Unpaid User</p>
+            </div>
+            <div class="icon">
+              <i class="ion ion-pie-graph"></i>
+            </div>
+            <a href="/admmin/pending/{{typ.User_Id}}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+          </div>
+        </div>
+        <!-- /.col -->
+        </div>
+          <!-- /.row -->
+
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card card-primary card-outline">
+              <div class="card-header">
+                <h5 class="card-title"><i class="far fa-chart-bar"></i>Monthly Report</h5>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-md-8">
+                    <p class="text-center">
+                      <strong> Members in 2023</strong>
+                    </p>
+                    <canvas id="myChart" style="width:100%;max-width:1500px;height:250px"></canvas>
+                  </div>
+                  <div class="col-md-4">
+                    <p class="text-center">
+                      <strong>Plans</strong>
+                    </p>
+                  {%for row in plan%}  
+                    <div class="progress-group">
+                      {{row.Plan_Name}}
+                      <span class="float-right"><b>{{row.Price}}</b>{{row.Time_period}}</span>
+                      <div class="progress progress-sm">
+                        <div class="progress-bar bg-primary" style="width: 100%"></div>
+                      </div>
+                    </div>
+                    <!-- /.progress-group -->
+                  {%endfor%}
+                    <div class="progress-group">
+                      Extra equipments charges for some equipment
+                      <span class="float-right"><b>200</b>/month</span>
+                      <div class="progress progress-sm">
+                        <div class="progress-bar bg-warning" style="width: 100%"></div>
+                      </div>
+                    </div>
+                    <center><button class="btn btn-success"><a href="/admin/Plans/{{typ.User_Id}}" style="color:aliceblue">Update</a></button></center>
+                    <!-- /.progress-group -->
+                  </div>
+                </div>
+                <!-- /.row -->
+              </div>
+              <!-- ./card-body -->
+            </div>
+            <!-- /.card -->
+          </div>
+
+        </div>
+          <!-- /.row -->
+      </div><!--/. container-fluid -->
+    </section>
+  </div>
+
+  <!-- Footer  -->
+
+  <footer class="footer "  style="background-color: rgba(0, 0, 0, 0.263); margin-left: 5px; margin-right: 5px; height: 30px; padding-top: 1px;">
+    <center><strong>Copyright &copy; 2023 <a href="#">Ashutosh Singh</a>.</strong>
+      All rights reserved.
+    </center>
+  </footer>
+
+  <!-- REQUIRED SCRIPTS -->
+  <!-- jQuery -->
+  <script src="/static/plugins/jquery/jquery.min.js"></script>
+  <script src="/static/plugins/jquery/jquery.min.js"></script>
+  <!-- Bootstrap -->
+  <script src="/static/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/static/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- overlayScrollbars -->
+  <script src="/static/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+  <script src="/static/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+  <!-- AdminLTE App -->
+  <script src="/static/dist/js/adminlte.js"></script>
+  <script src="/static/dist/js/adminlte.js"></script>
+
+  <!-- PAGE PLUGINS -->
+  <!-- jQuery Mapael -->
+  <script src="/static/plugins/jquery-mousewheel/jquery.mousewheel.js"></script>
+  <script src="/static/plugins/raphael/raphael.min.js"></script>
+  <script src="/static/plugins/jquery-mapael/jquery.mapael.min.js"></script>
+  <script src="/static/plugins/jquery-mapael/maps/usa_states.min.js"></script>
+  <script src="/static/plugins/jquery-mousewheel/jquery.mousewheel.js"></script>
+  <script src="/static/plugins/raphael/raphael.min.js"></script>
+  <script src="/static/plugins/jquery-mapael/jquery.mapael.min.js"></script>
+  <script src="/static/plugins/jquery-mapael/maps/usa_states.min.js"></script>
+  <!-- ChartJS -->
+  <script src="/static/plugins/chart.js/Chart.min.js"></script>
+  <script src="/static/plugins/chart.js/Chart.min.js"></script>
+  <script src="../../plugins/flot/jquery.flot.js"></script>
+  <script src="../../plugins/flot/plugins/jquery.flot.resize.js"></script>
+  <script src="../../plugins/flot/plugins/jquery.flot.pie.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+
+  <!-- AdminLTE for demo purposes -->
+  <script src="/static/dist/js/demo.js"></script>
+  <script src="/static/dist/js/demo.js"></script>
+  <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+  <script src="/static/dist/js/pages/dashboard2.js"></script>
+
+
+  <script>
+  
+    const xValues = [0,"January","February","March","April","May","June","July","August","September","October","November","December"];
+    const yValues = [0];
+    {%for row in range(l)%}
+     yValues.push({{list_graph[row]['Member_Count']}})
+     {%endfor%}
+    new Chart("myChart", {
+      type: "line",
+      data: {
+        labels: xValues,
+        datasets: [{
+          fill: false,
+          lineTension: 0,
+          backgroundColor: "white",
+          borderColor: "rgba(255, 0, 0, 0.8)",
+          data: yValues
+        }]
+      },
+      options: {
+        legend: {display: false},
+        scales: {
+          yAxes: [{ticks: {min: 0, max:{{c[0]}}}}],
+        }
+      }
+    });
+    </script>
+</body>

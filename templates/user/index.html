@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body style=" background-color:gray">
+
+    <!----------------------------------------- section 1  Home -------------------------------------------------->
+
+  <div class="home">
+        <nav>
+            <!-- <div class="image"><img src="/images/logo.png" alt=""></div> -->
+            <span>GymTech</span>
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#about">ABOUT US</a></li>
+                <li><a href="#plans">PLANS</a></li>
+                <li><a href="#trainers">TRAINERS</a></li>
+                {%if current_user.is_anonymous%}
+                  <button><a href="/loginPage" style="color: aliceblue;">LOG IN</a></button>
+                {%elif current_user.is_authenticated%}
+                  <button><a href="/logout" style="color: aliceblue;">{{user.Fullname}}</a></button>
+                {%endif%}
+            </ul>
+        </nav>
+
+        <div class="container">
+            <div class="text">
+                <h1>FITNESS CLUB.</h1>
+                <p>If you want something you've never had, you must be willing<br> to do something you've never done.</p>
+                {%if current_user.is_anonymous%}
+                <button><a href="/SignUp" style="color: aliceblue;">Join Now</a></button>
+                {%endif%}
+            </div>
+        </div>
+    </div>
+
+    
+  <!-------------------------------------------- section 2 About ------------------------------------------------->
+
+    <div class="about" id="about">
+         <h1 style="text-align: center;">ABOUT US</h1>
+       
+       <div class="text">
+            <h3>Welcome to Fitness Unlimited!</h3>
+
+            <p>We are a premier fitness center located in the heart of the city,dedicated to helping you achieve your health and fitness goals in a supportive and welcoming environment.</p>
+
+            <p>Our state-of-the-art facility offers top-of-the-line equipment, group fitness classes, fitness programs, and personal training services to individuals of all fitness levels.</p>
+
+            <p>we believe in the power of community, and our gym is the place to meet other like-minded individuals who share your passion for health and wellness.</p>
+        {%if current_user.is_authenticated%}
+            <button><a href="/Equipments" style="color:aliceblue; text-decoration:none;">Equipment Details</a></button>
+        {%endif%}
+        </div>
+
+    </div>
+
+  <!-------------------------------------------- section 3 Plans ------------------------------------------------->
+    {%if current_user.is_authenticated%}
+        <div class="plans" id="plans">
+            <nav>
+                <ul><li><h1>PLANS</h1></li></ul>
+            </nav>
+                <div class="package">
+                    {%for row in range(l)%}
+                       {%if price[row].Plan_Name=='BASIC'%}
+                            <div class="basic" id="pay">
+                                <center>
+                                    <div class="logo"><i class="fa fa-pie-chart" aria-hidden="true"></i></div>
+                                    <p style="margin-bottom: 10px;"><b>{{price[row].Plan_Name}}</b></p>
+                                    <p><i class="fa fa-inr" aria-hidden="true"></i>{{price[row].Price}}/month</p>
+                                    <div class="rules">
+                                        <p><i class="fa fa-check-circle-o" aria-hidden="true"></i>6 Days in a Week</p>
+                                        <p><i class="fa fa-check-circle-o" aria-hidden="true"></i>O1 Sweatshirt</p>
+                                        <p style="text-decoration: line-through; opacity: 0.4;"><i class="fa fa-check-circle-o" aria-hidden="true" ></i>O1 Bottle of the Protein</p>
+                                        <p style="text-decoration: line-through; opacity: 0.4;"><i class="fa fa-check-circle-o" aria-hidden="true"></i>Access to Videos</p>
+                                        <p style="text-decoration: line-through; opacity: 0.4;"><i class="fa fa-check-circle-o" aria-hidden="true"></i>Muscle Stretching</p>
+                                        <button onclick="openPaymentPage('{{product[row]['order_id']}}', '{{product[row]['price']}}', {{product[row]['plans_id']}}, {{product[row]['customer_id']}})">Purchase</button>
+                                    </div>
+                                </center>
+                            </div>    
+                       {%endif%}
+                       {%if price[row].Plan_Name=='PREMIUM'%}
+                            <div class="primium" id="pay">
+                                <center>
+                                    <div class="logo"><i class="fa fa-empire" aria-hidden="true"></i></div>
+                                    <p style="margin-bottom: 10px;"><b>{{price[row].Plan_Name}}</b></p>
+                                    <p><i class="fa fa-inr" aria-hidden="true"></i>{{price[row].Price}}/month</p>
+                                    <div class="rules">
+                                        <p><i class="fa fa-check-circle-o" aria-hidden="true"></i>6 Days in a Week</p>
+                                        <p><i class="fa fa-check-circle-o" aria-hidden="true"></i>O1 Sweatshirt</p>
+                                        <p><i class="fa fa-check-circle-o" aria-hidden="true"></i>O1 Bottle of the Protein</p>
+                                        <p style="text-decoration: line-through; opacity: 0.4;"><i class="fa fa-check-circle-o" aria-hidden="true"></i>Access to Videos</p>
+                                        <p style="text-decoration: line-through; opacity: 0.4;"><i class="fa fa-check-circle-o" aria-hidden="true"></i>Muscle Stretching</p>
+                                        <button onclick="openPaymentPage('{{product[row]['order_id']}}', '{{product[row]['price']}}', {{product[row]['plans_id']}}, {{product[row]['customer_id']}})">Purchase</button>
+                                    </div>
+                                </center>
+                            </div>
+                       {%endif%}
+                       {%if price[row].Plan_Name=='DIAMOND'%}
+                            <div class="diamond" id="pay">
+                                <center>
+                                    <div class="logo"><i class="fa fa-diamond" aria-hidden="true"></i></div>
+                                    <p style="margin-bottom: 10px;"><b>{{price[row].Plan_Name}}</b></p>
+                                    <p><i class="fa fa-inr" aria-hidden="true"></i>{{price[row].Price}}/month</p>
+                                    <div class="rules">
+                                        <p><i class="fa fa-check-circle-o" aria-hidden="true"></i>6 Days in a Week</p>
+                                        <p><i class="fa fa-check-circle-o" aria-hidden="true"></i>O1 Sweatshirt</p>
+                                        <p><i class="fa fa-check-circle-o" aria-hidden="true"></i>O1 Bottle of the Protein</p>
+                                        <p><i class="fa fa-check-circle-o" aria-hidden="true"></i>Access to Videos</p>
+                                        <p><i class="fa fa-check-circle-o" aria-hidden="true"></i>Muscle Stretching</p>
+                                        <button onclick="openPaymentPage('{{product[row]['order_id']}}', '{{product[row]['price']}}', {{product[row]['plans_id']}}, {{product[row]['customer_id']}})">Purchase</button>
+                                    </div>
+                                </center>
+                            </div>
+                       {%endif%}            
+                    {%endfor%}  
+                </div>
+            <div class="footer">
+                <center>  <p>Note:- Trainer Fees are not included in these packages</p></center>
+            </div>
+        </div>
+    {%endif%}
+  <!------------------------------------------- Section 4 Trainers ----------------------------------------------->
+    <div class="trainers" id="trainers">
+        <nav>
+            <ul><li><h1>TRAINERS</h1></li></ul>
+        </nav>
+
+        <div class="general">
+            We also have experienced and knowledgable trainers in our gym who helps you to transform you body. We have different
+            types of trainers who actually help you in different ways so that it help you to transform your body.All our trainers
+            are medalist in any of the bodybuilding compitition.
+         </div>
+        <table border="1">
+            <th><h1>Types</h1></th>
+            <tr>
+                <td>General Trainer</td>        
+            </tr>
+            <tr>
+                <td>Personal Trainer</td>
+            </tr>
+            <tr>
+                <td>Nutrionist</td>
+            </tr>
+            <tr>
+                <td>Massage Trainer</td>
+            </tr>
+        </table>
+        {%if current_user.is_authenticated%}
+        <button><a href="/Trainers" style="color: aliceblue; text-decoration:none;">Trainer's Details</a>
+        {%endif%}    
+        </button>
+    </div>
+    <!------------------------------------------ Section 5 Footer  ------------------------------------------------>
+
+    <footer>
+
+        <div class="footercontainer">
+
+            <div class="socialicons">
+                <a href="https://www.facebook.com/techpathservices" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+                <a href="https://www.instagram.com/techpathservices/?igshid=MzNlNGNkZWQ4Mg%3D%3D" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                <a href="https://www.linkedin.com/company/techpath-solutions/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                <a href="https://techpath.biz/" target="_blank"><i class="fa fa-google" aria-hidden="true"></i></a>
+                <a href="https://www.youtube.com/@techpath-services" target="_blank"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+            </div>
+    
+            <div class="footernav">
+                <ul>
+                    <li><a href="#home">HOME</a></li>
+                    <li><a href="#about">ABOUT US</a></li>
+                    <li><a href="#plans">PLANS</a></li>
+                    <li><a href="#trainers">TRAINERS</a></li>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="bottom">
+            <p>Copyright &copy;2023 Designed by <span class="designer">Ashutosh Singh</span></p>
+        </div>
+
+    </footer>
+ 
+
+    <form>
+        <script src="https://checkout.razorpay.com/v1/checkout.js">
+        </script>
+      </form>
+      
+      <script>
+        function openPaymentPage(order_id, price, plan_id, customer_id) {
+            
+            console.log(order_id, price, plan_id, customer_id)
+ 
+                    var requestData = {
+                    Order_id: order_id,
+                    Price:price,
+                    Plan: plan_id,
+                    User: customer_id
+                    };
+
+                    var jsonData = JSON.stringify(requestData);
+
+                    var xhr = new XMLHttpRequest();              
+
+                    xhr.open("POST", "/order_update", true);
+                    xhr.setRequestHeader("Content-Type", "application/json");                   
+                    xhr.onload = function() {
+
+                    if (xhr.status === 200) {
+
+                        var response = JSON.parse(xhr.responseText);
+
+                        console.log(response);
+
+                    } else {
+
+                        console.log("Error: " + xhr.status);
+
+                    }
+
+                    };
+                    xhr.send(jsonData);
+
+            var options = {
+                "key": "rzp_live_OlSWv9YA7i7L6E",
+                "amount":  price,
+                "currency": "INR",
+                "name": "GymTech",
+                "description": "Test payment",
+                "order_id": order_id,
+                "callback_url": "/webhooks-payment",
+                 {%if current_user.is_authenticated%}
+                    "prefill": {
+                        "name": "{{user.Fullname}}",
+                        "email": "{{user.Email}}",
+                        "contact": "{{user.Contact}}"
+                    }
+                 {%endif%}
+                
+            };
+            var rzp = new Razorpay(options);
+            rzp.open();
+            document.getElementById(pay);
+            
+        }
+    </script>
+      
+      
+</body>
+</html>
+

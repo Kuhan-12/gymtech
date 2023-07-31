@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff Table</title>
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="/static/plugins/fontawesome-free/css/all.min.css">
+    <!-- overlayScrollbars -->
+    <link rel="stylesheet" href="/static/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="/static/dist/css/adminlte.min.css">
+</head>
+<body class="hold-transition dark-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
+
+  <!-- Navbar  -->
+  <div class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2"  style="background-color:  rgba(0, 0, 0, 0.263); height: 80px;">
+        <div class="col-sm-6">
+          <div class="image user-panel d-flex mt-3">
+            <img src="/static/dist/img/adminlogo.png" alt="GymTech Logo" class="img-circle elevation-2" style="width: 80px; height: 60px;">
+            <div class="info">
+              <a href="/admin/{{typ.User_Id}}" class="d-block" style="font-size: 2em; color: white;">GymTech</a>
+            </div>
+          </div>
+          <!-- <h1 class="m-0">GymTech</h1> -->
+        </div><!-- /.col -->
+        <div class="col-sm-6">
+          <ol class="breadcrumb float-sm-right">
+            <div class="image user-panel d-flex mt-3">
+              <img src="/{{typ.file}}" class="img-circle elevation-2" alt="User Image" style="width: 80px; height: 60px;">
+              <div class="info">
+                <a href="/logout" class="d-block" style="font-size: 2em; color: white;">{{typ.Fullname}}</a>
+              </div>
+          </div>
+          </ol>
+        </div><!-- /.col -->
+      </div><!-- /.row -->
+    </div><!-- /.container-fluid -->
+  </div>
+ 
+  <!-- Content  -->
+
+  <div class="card">
+    <div class="card-header border-transparent">
+      <h3 class="card-title" style="font-size: 2em;">STAFF DETAILS</h3>
+    </div>
+    <!-- /.card-header -->
+    <div class="card-body p-0">
+      <div class="table-responsive">
+        <table class="table m-0">
+          <thead>
+          <tr>
+            <th>Serial No.</th>
+            <th>Name</th>
+            <th>Occupation</th>
+            <th>Days Present</th>
+            <th>Experience</th>
+            <th>Salary</th>
+            <th>Fees</th>
+            <th>Members</th>
+            <th>Total</th>
+            <th>Contact</th>
+            <th>Action</th>
+          </tr>
+          </thead>
+          <tbody>
+            {%for row in range(l)%}
+              <tr>
+                <td>{{wager[row]['Serial No.']}}</td>
+                <td>{{wager[row]['Name']}}</td>
+                <td>{{wager[row]['Occupation']}}</td>
+                <td>{{wager[row]['Working_Days']}}</td>
+                <td>{{wager[row]['Experience']}}</td>
+                <td>{{wager[row]['Salary']}}</td>
+                <td>{{wager[row]['Fees']}}</td>
+                <td>14</td>
+                <td>{{wager[row]['Total']}}</td>
+                <td>{{wager[row]['Contact']}}</td>
+                <td>
+                  <div class="btn-group">
+                    <a href="/admin/staff/update/{{typ.User_Id}}/{{wager[row]['Staff_id']}}/{{wager[row]['User_Id']}}" class="btn btn-warning">Update</a>
+                  </div>
+                  <div class="btn-group">
+                    <a href="/admin/staff/delete/{{typ.User_Id}}/{{wager[row]['Staff_id']}}/{{wager[row]['User_Id']}}" class="btn btn-danger">Delete</a>
+                  </div>
+                </td>
+              </tr>
+            {%endfor%}
+          
+          </tbody>
+        </table>
+    </div>
+    <!-- /.table-responsive -->
+    <!-- /.card-body -->
+    <div class="card-footer clearfix">
+      <a href="/admin/member/registration/{{typ.User_Id}}" class="btn btn-sm btn-info float-left">Add New Staff</a>
+    </div>
+    <!-- /.card-footer -->
+  </div>
+
+  <!-- footer  -->
+  <footer class="footer "  style="margin-top:10px; background-color: rgba(0, 0, 0, 0.263); margin-left: 5px; margin-right: 5px; height: 30px; padding-top: 1px;">
+    <center><strong>Copyright &copy; 2023 <a href="#">Ashutosh Singh</a>.</strong>
+      All rights reserved.</center>
+  </footer>
+
+</body>
+</html>

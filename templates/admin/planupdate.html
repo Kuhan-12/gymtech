@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Plans</title>
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="/static/plugins/fontawesome-free/css/all.min.css">
+    <!-- overlayScrollbars -->
+    <link rel="stylesheet" href="/static/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="/static/dist/css/adminlte.min.css">
+</head>
+<body class="hold-transition dark-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
+
+  <!-- Navbar  -->
+  <div class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2"  style="background-color:  rgba(0, 0, 0, 0.263); height: 80px;">
+        <div class="col-sm-6">
+          <div class="image user-panel d-flex mt-3">
+            <img src="/static/dist/img/adminlogo.png" alt="GymTech Logo" class="img-circle elevation-2" style="width: 80px; height: 60px;">
+            <div class="info">
+              <a href="/admin/{{typ.User_Id}}" class="d-block" style="font-size: 2em; color: white;">GymTech</a>
+            </div>
+          </div>
+          <!-- <h1 class="m-0">GymTech</h1> -->
+        </div><!-- /.col -->
+        <div class="col-sm-6">
+          <ol class="breadcrumb float-sm-right">
+            <div class="image user-panel d-flex mt-3">
+              <img src="/{{typ.file}}" class="img-circle elevation-2" alt="User Image" style="width: 80px; height: 60px;">
+              <div class="info">
+                <a href="/logout" class="d-block" style="font-size: 2em; color: white;">{{typ.Fullname}}</a>
+              </div>
+          </div>
+          </ol>
+        </div><!-- /.col -->
+      </div><!-- /.row -->
+    </div><!-- /.container-fluid -->
+  </div>
+ 
+  <!-- Content  -->
+
+  <div class="card">
+      <div class="card-header border-transparent">
+        <h3 class="card-title" style="font-size: 2em;">Update Plans</h3>
+      </div>
+      <!-- /.card-header -->
+      <div class="card-body p-0">
+        <div class="table-responsive">
+          <table class="table m-0">
+            <thead>
+              <tr>
+                <th>Serial No.</th>
+                <th>Name</th>
+                <th>Fees</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+            {%for row in plan%}
+              <form action="/admin/Plans/Update/{{typ.User_Id}}/{{row.Plans_Id}}" method="post">
+                <tr>
+                  <td>{{row.Plans_Id}}</td>
+                  <td><input type="text" value="{{row.Plan_Name}}" name="Plan_Name" style="border-radius: 10px;"></td>
+                  <td><input type="text" value="{{row.Price}}" name="Price" style="border-radius: 10px;"></td>
+                  <td>
+                    <div class="card-footer clearfix">
+                      <button type="submit" class="btn btn-warning">Update</button>
+                  </div>
+                  </td>
+                </tr>
+              </form>
+            {%endfor%}
+            </tbody>
+          </table>
+      </div>
+      <!-- /.table-responsive -->
+    <!-- /.card-body -->
+    <div class="card-footer clearfix">
+      <a href="/admin/{{typ.User_Id}}" class="btn btn-success">Submit</a>
+    </div>
+    <!-- /.card-footer -->
+      
+</div>
+
+  <!-- footer  -->
+  <footer class="footer "  style="margin-top:10px; background-color: rgba(0, 0, 0, 0.263); margin-left: 5px; margin-right: 5px; height: 30px; padding-top: 1px;">
+    <center><strong>Copyright &copy; 2023 <a href="#">Ashutosh Singh</a>.</strong>
+      All rights reserved.</center>
+  </footer>
+
+</body>
+</html>

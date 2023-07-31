@@ -1,0 +1,30 @@
+trigger:
+  - main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- task: ArchiveFiles@2
+  inputs:
+    rootFolderOrFile: '$(System.DefaultWorkingDirectory)'
+    includeRootFolder: true
+    archiveType: 'zip'
+    archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
+    replaceExistingArchive: true
+- task: CopyFilesOverSSH@0
+  displayName: 'Securely copy files to the remote machine'
+  inputs:
+    sshEndpoint: 'techpathinternalserver'
+    sourceFolder: '$(Build.ArtifactStagingDirectory)'
+    targetFolder: '/var/www/gymtech.techpath.biz/public_html'
+- task: SSH@0
+  inputs:
+    sshEndpoint: 'techpathinternalserver'
+    runOptions: 'commands'
+    commands: |
+      echo "Starting";
+      cd /var/www/gymtech.techpath.biz/public_html/ && unzip -o $(Build.BuildId).zip
+      source /var/www/gymtech.techpath.biz/public_html/venv/bin/activate && pip3 install -r /var/www/gymtech.techpath.biz/public_html/s/requirements.txt;
+      rm /var/www/gymtech.techpath.biz/public_html/$(Build.BuildId).zip
+    readyTimeout: '20000'

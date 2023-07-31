@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equipments Registration</title>
+    <link rel="stylesheet" href="/static/dist/css/adminlte.min.css">
+</head>
+<body class="hold-transition dark-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed" style="background: url('/static/images/bg6.jpg');">
+  <div class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2"  height: 80px;>
+        <div class="col-sm-6">
+          <div class="image user-panel d-flex mt-3">
+            <img src="/static/dist/img/adminlogo.png" alt="GymTech Logo" class="img-circle elevation-2" style="width: 80px; height: 60px;">
+            <div class="info">
+              <a href="/admin/{{rem.User_Id}}" class="d-block" style="font-size: 2em; color: white;">GymTech</a>
+            </div>
+          </div>
+        </div><!-- /.col -->
+        <div class="col-sm-6">
+          <ol class="breadcrumb float-sm-right">
+            <div class="image user-panel d-flex mt-3">
+              <img src="/{{rem.file}}" class="img-circle elevation-2" alt="User Image" style="width: 80px; height: 60px;">
+              <div class="info">
+                <a href="/logout" class="d-block" style="font-size: 2em; color: white;">{{rem.Fullname}}</a>
+              </div>
+          </div>
+          </ol>
+        </div><!-- /.col -->
+      </div><!-- /.row -->
+    </div><!-- /.container-fluid -->
+  </div>
+  <div class="card-info mx-auto col-12 col-md-8 col-lg-8">
+    <div class="card-header" style="width: 800px; margin-left: 90px; margin-top:50px;">
+      <h3 class="card-title" style="font-size: 1.8em;">ADD EQUIPMENTS</h3>
+    </div>
+    <!-- /.card-header -->
+    <!-- form start -->
+    <form action="/admin/equipment/update/{{rem.User_Id}}/{{tool_upgrade.Equipment_Id}}" method="POST" enctype="multipart/form-data">
+      <div class="card-body d-flex flex-wrap">
+        <div class="form-group"  style="width: 400px; margin-left:50px;">
+            <label for="exampleInputEmail1">Name</label>
+            <input type="text" class="form-control" name="Name" value="{{tool_upgrade.Name}}" id="exampleInputEmail1">
+        </div>
+        <div class="form-group" style="width: 400px; margin-left:50px;">
+          <label for="exampleInputPassword1">Category</label>
+          <select class="select col-md-12" name="Category" value="{{tool_upgrade.Category}}" style="height: 40px; border-radius:4px;">
+            <option value="{{tool_upgrade.Category}}">{{tool_upgrade.Name}}</option>
+            <option value="All">All</option>
+            <option value="Back">Back</option>
+            <option value="Biceps">Biceps</option>
+            <option value="Chest">Chest</option>
+            <option value="Triceps">Triceps</option>
+            <option value="Leg">Leg</option>
+            <option value="Shoulder">Shoulder</option>
+          </select>
+        </div>
+        <div class="form-group" style="width: 400px; margin-left:50px;">
+          <label for="exampleInputEmail1">Weight</label>
+          <input type="text" class="form-control" name="Weight" id="exampleInputEmail1" value="{{tool_upgrade.Weight}}">
+        </div>
+        <div class="form-group" style="width: 400px; margin-left:50px;">
+          <label for="exampleInputEmail1">Quantity</label>
+          <input type="text" class="form-control" name="Quantity" id="exampleInputEmail1" value="{{tool_upgrade.Quantity}}">
+        </div>
+        <div class="form-group" style="width: 400px; margin-left:50px;">
+          <label for="exampleInputEmail1">Company</label>
+          <input type="text" class="form-control" name="Company" id="exampleInputEmail1" value="{{tool_upgrade.Company}}">
+        </div>
+        <div class="form-group" style="width: 400px; margin-left:50px;">
+          <label for="exampleInputEmail1">Charge</label>
+          <input type="text" class="form-control" name="Equipment_Charge" id="exampleInputEmail1" value="{{tool_upgrade.Equipment_Charge}}">
+        </div>
+        <div class="form-group" style="width: 800px; margin-left:75px;">
+          <label for="exampleInputFile">Images</label>
+          <div class="input-group">
+            <div class="custom-file">
+              <input type="file" name="Image" class="custom-file-input">
+              <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /.card-body -->
+
+      <center>
+        <div class="card-footer ">
+            <button type="submit" value="Upload" class="btn btn-info" style="width: 200px; border-radius:8px; font-size:1.5em;">Submit</button>
+        </div>
+      </center>
+    </form>
+  </div>
+</body>
+</html>

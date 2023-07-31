@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equipments</title>
+    <link rel="stylesheet" href="/static/eqipments.css">
+</head>
+<body>
+{%for row in equipments%}
+  <center>
+    <div class="details1">
+        <div class="equipment">
+            <div class="content">  
+                <img src=/{{row.Image}} alt="">
+                <h3>{{row.Name}}</h3>
+                <h2>{{row.Category}}<br>
+                    {{row.Quantity}}<br>
+                </h2>
+                {%if row.Equipment_Charge=="0"%}
+                  <button class="status1">Free</button>
+                {%else%}
+                  <button class="status2">{{row.Equipment_Charge}}</button>
+                {%endif%}            
+            </div>
+        </div>
+    </div>
+  </center>
+{%endfor%}
+</body>
+</html>
